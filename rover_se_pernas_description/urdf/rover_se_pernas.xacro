@@ -27,61 +27,61 @@
 
 <link name="body_four_2">
   <inertial>
-    <origin xyz="-0.02755717247325251 -0.047631594014974965 0.005362083573672183" rpy="0 0 0"/>
+    <origin xyz="0.035430540004315336 -0.04208464933903866 -0.005519906335963887" rpy="0 0 0"/>
     <mass value="8.776606415040463"/>
-    <inertia ixx="0.070797" iyy="0.094821" izz="0.060955" ixy="0.018011" iyz="-0.000257" ixz="0.00048"/>
+    <inertia ixx="0.080352" iyy="0.085696" izz="0.060524" ixy="-0.021267" iyz="9.9e-05" ixz="0.000113"/>
   </inertial>
   <visual>
-    <origin xyz="-0.833215 -0.635473 -0.908273" rpy="0 0 0"/>
+    <origin xyz="0.13865 -0.623965 -0.873792" rpy="0 0 0"/>
     <geometry>
       <mesh filename="file://$(find rover_se_pernas_description)/meshes/body_four_2.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
-    <origin xyz="-0.833215 -0.635473 -0.908273" rpy="0 0 0"/>
+    <origin xyz="0.13865 -0.623965 -0.873792" rpy="0 0 0"/>
     <geometry>
       <mesh filename="file://$(find rover_se_pernas_description)/meshes/body_four_2.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
 
-<link name="body_five_v7_1">
+<link name="body_five_v1_1">
   <inertial>
-    <origin xyz="0.0007132810319058214 0.00426127025979034 -0.024439211831007723" rpy="0 0 0"/>
-    <mass value="11.344297853514144"/>
-    <inertia ixx="0.034487" iyy="1.409892" izz="1.396504" ixy="0.000254" iyz="-0.003774" ixz="-0.000343"/>
+    <origin xyz="-8.743278571643476e-06 -0.004693176964223167 -0.031385865942044955" rpy="0 0 0"/>
+    <mass value="31.572386001764215"/>
+    <inertia ixx="0.100079" iyy="3.808518" izz="3.768266" ixy="-6e-06" iyz="-0.001951" ixz="-2e-06"/>
   </inertial>
   <visual>
     <origin xyz="-0.360009 -0.49 -1.192273" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find rover_se_pernas_description)/meshes/body_five_v7_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rover_se_pernas_description)/meshes/body_five_v1_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="-0.360009 -0.49 -1.192273" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find rover_se_pernas_description)/meshes/body_five_v7_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rover_se_pernas_description)/meshes/body_five_v1_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
 
 <link name="body_three_1">
   <inertial>
-    <origin xyz="0.0020044111265539177 0.0038744475994180183 -0.17574654012655755" rpy="0 0 0"/>
+    <origin xyz="4.103885302927956 -0.45207085954759685 -0.5933149499357538" rpy="0 0 0"/>
     <mass value="8.11027433263604"/>
-    <inertia ixx="0.062849" iyy="0.054085" izz="0.027423" ixy="-0.006628" iyz="0.005342" ixz="0.002834"/>
+    <inertia ixx="0.059489" iyy="0.057445" izz="0.027423" ixy="0.00788" iyz="0.004521" ixz="-0.004017"/>
   </inertial>
   <visual>
-    <origin xyz="-0.770009 -0.51732 -1.133273" rpy="0 0 0"/>
+    <origin xyz="4.15681 -0.978792 -1.516361" rpy="0 0 0"/>
     <geometry>
       <mesh filename="file://$(find rover_se_pernas_description)/meshes/body_three_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
-    <origin xyz="-0.770009 -0.51732 -1.133273" rpy="0 0 0"/>
+    <origin xyz="4.15681 -0.978792 -1.516361" rpy="0 0 0"/>
     <geometry>
       <mesh filename="file://$(find rover_se_pernas_description)/meshes/body_three_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -89,23 +89,23 @@
 </link>
 
 <joint name="Revolucionar 16" type="continuous">
-  <origin xyz="0.063206 0.118153 -0.225" rpy="0 0 0"/>
+  <origin xyz="4.01816 -0.354827 -0.642569" rpy="0 0 0"/>
   <parent link="body_three_1"/>
   <child link="body_four_2"/>
-  <axis xyz="0.471778 0.881717 -0.0"/>
+  <axis xyz="-0.661566 0.749887 0.0"/>
 </joint>
 
-<joint name="Rígido 20" type="fixed">
+<joint name="Rígido 22" type="fixed">
   <origin xyz="0.360009 0.49 1.192273" rpy="0 0 0"/>
   <parent link="base_link"/>
-  <child link="body_five_v7_1"/>
+  <child link="body_five_v1_1"/>
 </joint>
 
-<joint name="Revolucionar 21" type="continuous">
-  <origin xyz="0.41 0.02732 -0.059" rpy="0 0 0"/>
-  <parent link="body_five_v7_1"/>
+<joint name="Revolucionar 23" type="continuous">
+  <origin xyz="-4.516819 0.488792 0.324088" rpy="0 0 0"/>
+  <parent link="body_five_v1_1"/>
   <child link="body_three_1"/>
-  <axis xyz="0.0 0.0 -1.0"/>
+  <axis xyz="0.0 0.0 1.0"/>
 </joint>
 
 </robot>

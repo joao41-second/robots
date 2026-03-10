@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<robot name="body_five" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find body_five_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find body_five_description)/urdf/body_five.ros2control" />
+<xacro:include filename="$(find body_five_description)/urdf/body_five.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="4.407133164571569 0.9093885777759674 0.6844127055588167" rpy="0 0 0"/>
+    <mass value="11344.297847732963"/>
+    <inertia ixx="3448.74451" iyy="139650.448217" izz="140989.179845" ixy="34.30924" iyz="377.422243" ixz="25.417272"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find body_five_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find body_five_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+</robot>
